@@ -58,7 +58,7 @@ def generate_launch_description():
     # RViz2 for visualization
     rviz2 = Node(
         package='rviz2',
-        executable='rviz2',
+        executable='rviz2',  # test auto push
         name='rviz2',
         arguments=['-d', os.path.join(get_package_share_directory('depth_camera_mapping'), 'rviz', 'rtabmap.rviz')],
         parameters=[{'use_sim_time': use_sim_time}]
@@ -71,4 +71,5 @@ def generate_launch_description():
         rtabmap,
         static_transform,  # 添加静态变换发布
         rviz2
-    ])
+    ])  
+
